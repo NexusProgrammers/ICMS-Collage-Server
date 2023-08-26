@@ -13,6 +13,10 @@ app.use(express.json());
 
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
+app.get('/',(req,res) => {
+    res.end('API RUNNNING')
+})
+
 app.use("/api/v1/users", userRouter);
 
 app.use("/api/v1/applies", applyRouter);
